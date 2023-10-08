@@ -22,8 +22,9 @@ Python爬蟲－從3GPP歷年會議紀錄分析企業標準化策略
     * 各spec所更新之總版本數量
 
 ### （二）2023.03.08 spec relationship
-爬取parent spec和child spec的連結
-
+1. 爬取parent spec和child spec的連結
+2. 以企業名稱呈現parent & child之連結
+   
 ![範例](https://github.com/pei9564/NCKU-lab-3GPP-analysis/assets/103319735/d9e7f4bc-b1ab-47fd-9301-c2da85cd6e74)
 
 ### （三）2023.04.08 spec history
