@@ -2,7 +2,39 @@
 Python爬蟲－從3GPP歷年會議紀錄分析企業標準化策略
 
 
-## 一、Specification分析內容
+
+
+## 一、Work Item分析內容
+
+### （一）自動下載、解壓縮並爬取會議紀錄文件
+
+1. 自動下載excel檔中所有連結檔案並解壓縮
+2. 使用excel VBA將doc轉換成docx
+3. 讀取所有整理好的docx檔
+4. 補上WI ID，並檢視爬取失敗的檔案
+
+### （二）整理WI資料表
+1. 新增WIR所屬企業：從WIR name, WIR email整理
+2. 新增下載狀況：該WI是否有連結、以及是否有下載成功
+3. 新增專案完成度：以專案是否完成取代專案完成比率
+4. 新增TSG分類：分成RAN、SA、CT
+
+### （三）合併WI資料表至SUP資料表、建立company overview
+1. 整理爬下來的supporting member表格
+2. 統一WI表格中WIR與SUP企業名稱
+3. 統一supporting member表格中WIR與SUP企業名稱
+4. 合併WI表格到supporting member表格中
+5. 整理company overview表格：所有企業在不同版本參與WI次數
+6. 拆分成TSG和RAN兩個版本輸出
+   
+### （四）建立每個release的WIR-supporting member dyads
+1. Generate Dyad data (for Ucinet) - supporting member to rapporteur
+   
+### （五）compute reputation & status
+1. 建立Dyad資料－依變數、自變數、控制變數
+
+
+## 二、Specification分析內容
 
 ### （一）2023.03.08 spec analysis
 1. 篩選提交至Work plan之specification資料並補上SPR企業
@@ -32,33 +64,3 @@ Python爬蟲－從3GPP歷年會議紀錄分析企業標準化策略
 
 ![範例](https://github.com/pei9564/NCKU-lab-3GPP-analysis/assets/103319735/bb1b3040-9b3b-4a39-8fce-c21edd47fae8)
 
-
-
-## 二、Work Item分析內容
-
-### （一）自動下載、解壓縮並爬取會議紀錄文件
-
-1. 自動下載excel檔中所有連結檔案並解壓縮
-2. 使用excel VBA將doc轉換成docx
-3. 讀取所有整理好的docx檔
-4. 補上WI ID，並檢視爬取失敗的檔案
-
-### （二）整理WI資料表
-1. 新增WIR所屬企業：從WIR name, WIR email整理
-2. 新增下載狀況：該WI是否有連結、以及是否有下載成功
-3. 新增專案完成度：以專案是否完成取代專案完成比率
-4. 新增TSG分類：分成RAN、SA、CT
-
-### （三）合併WI資料表至SUP資料表、建立company overview
-1. 整理爬下來的supporting member表格
-2. 統一WI表格中WIR與SUP企業名稱
-3. 統一supporting member表格中WIR與SUP企業名稱
-4. 合併WI表格到supporting member表格中
-5. 整理company overview表格：所有企業在不同版本參與WI次數
-6. 拆分成TSG和RAN兩個版本輸出
-   
-### （四）建立每個release的WIR-supporting member dyads
-1. Generate Dyad data (for Ucinet) - supporting member to rapporteur
-   
-### （五）compute reputation & status
-1. 建立Dyad資料－依變數、自變數、控制變數
