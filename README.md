@@ -7,11 +7,14 @@ Python爬蟲－從3GPP歷年會議紀錄分析企業標準化策略
 ## 一、Work Item分析內容
 
 ### （一）自動下載、解壓縮並爬取會議紀錄文件
-
-1. 自動下載excel檔中所有連結檔案並解壓縮
-2. 使用excel VBA將doc轉換成docx
-3. 讀取所有整理好的docx檔
-4. 補上WI ID，並檢視爬取失敗的檔案
+![WI資料表](https://github.com/pei9564/NCKU-lab-3GPP-analysis/assets/103319735/33c09f6a-254a-4a69-8f60-552d46319f64)
+![爬取內容1](https://github.com/pei9564/NCKU-lab-3GPP-analysis/assets/103319735/858268c5-a85b-4e15-aa3a-7db55440bf2c)
+![爬取內容2](https://github.com/pei9564/NCKU-lab-3GPP-analysis/assets/103319735/f88e45ea-46e2-4dfa-891c-e058b8839845)
+1. 自動下載excel檔中所有zip檔案並
+2. 解壓縮，並過濾pdf與excel檔案
+3. 使用Excel VBA將doc轉換成docx
+4. 爬取所有整理好的docx檔
+5. 檢視爬取失敗的檔案
 
 ### （二）整理WI資料表
 1. 新增WIR所屬企業：從WIR name, WIR email整理
